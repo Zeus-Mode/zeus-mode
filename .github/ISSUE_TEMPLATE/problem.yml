@@ -1,0 +1,45 @@
+name: Something does not work
+description: Zeus Mode did something you did not expect, or failed.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for telling us. Please do not paste secrets, tokens or private code.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Zeus Mode version
+      description: Run `zeus version` in a terminal and paste the first line.
+      placeholder: "zeus v0.35.0 · …"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "macOS 15.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: tools
+    attributes:
+      label: Which coding tools were running?
+      multiple: true
+      options:
+        - Claude Code
+        - Codex
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: A screenshot helps, if it shows nothing private.

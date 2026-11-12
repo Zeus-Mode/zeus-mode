@@ -1,0 +1,14 @@
+name: A question
+description: Ask how Zeus Mode works, or whether it fits your setup.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The guides may already answer it: https://zeusmode.ai/docs/
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
